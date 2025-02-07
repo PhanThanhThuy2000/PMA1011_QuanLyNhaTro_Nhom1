@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.pma1011_quanlynhatro_nhom2.fragments.QLPhongFragment;
 import com.example.pma1011_quanlynhatro_nhom2.fragments.TrangChuFragment;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView nvView;
     private TextView txtUser;
     FragmentManager fragmentManager;
+
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         toolBar = findViewById(R.id.toolBar);
         nvView = findViewById(R.id.nvView);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+
 
 
         //Set toolbar
@@ -110,21 +113,8 @@ public class MainActivity extends AppCompatActivity {
         nvView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-              if(item.getItemId() == R.id.nav_DangXuat){
-                    // Xóa dữ liệu trong SharedPreferences khi người dùng đăng xuất
-                    SharedPreferences pref = getSharedPreferences("user", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.clear();  // Xóa tất cả dữ liệu trong SharedPreferences
-                    editor.apply();  // Áp dụng thay đổi
-
-                    // Chuyển hướng về màn hình đăng nhập
-                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish();  // Đóng MainActivity để người dùng không quay lại trang này
-                } else if(item.getItemId() == R.id.nav_login){
-                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish();
+                if(item.getItemId() == R.id.nav_QLPhong){
+                    setTitleAndFragment("Quản lý phòng trọ", new QLPhongFragment());
                 }
                 drawer.closeDrawers(); //when clicked then close
                 return true;
@@ -189,10 +179,6 @@ public class MainActivity extends AppCompatActivity {
             editor.apply();
         }
     }
-
-
-
-
 
 
 }
