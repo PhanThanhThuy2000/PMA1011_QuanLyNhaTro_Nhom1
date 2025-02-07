@@ -13,16 +13,19 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pma1011_quanlynhatro_nhom2.R;
+
 import com.example.pma1011_quanlynhatro_nhom2.daos.DiaDiemDAO;
 import com.example.pma1011_quanlynhatro_nhom2.daos.HopDongDAO;
 import com.example.pma1011_quanlynhatro_nhom2.daos.PhongDAO;
 import com.example.pma1011_quanlynhatro_nhom2.models.DiaDiem;
 import com.example.pma1011_quanlynhatro_nhom2.models.Phong;
 
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
+
 
 public class PhongAdapter extends RecyclerView.Adapter<PhongAdapter.PhongViewHolder>{
     private Context context;
