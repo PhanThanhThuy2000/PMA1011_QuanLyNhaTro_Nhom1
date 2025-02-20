@@ -7,11 +7,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.util.Log;
 
+import com.example.pma1011_quanlynhatro_nhom2.database.DBhelper;
+import com.example.pma1011_quanlynhatro_nhom2.models.ThongBao;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import group1.pro1122.duan1.database.DBhelper;
-import group1.pro1122.duan1.models.ThongBao;
 
 public class ThongBaoDAO {
     private final DBhelper dBhelper;
