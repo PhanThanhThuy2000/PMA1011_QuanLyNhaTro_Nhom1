@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.pma1011_quanlynhatro_nhom2.fragments.QLHopDongFragment;
 import com.example.pma1011_quanlynhatro_nhom2.fragments.QLPhongFragment;
 import com.example.pma1011_quanlynhatro_nhom2.fragments.TrangChuFragment;
 import com.google.android.material.badge.BadgeDrawable;
@@ -115,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if(item.getItemId() == R.id.nav_QLPhong){
                     setTitleAndFragment("Quản lý phòng trọ", new QLPhongFragment());
+                }else if(item.getItemId() == R.id.nav_QLHopDong){
+                    setTitleAndFragment("Quản lý hợp đồng", new QLHopDongFragment());
                 }
                 drawer.closeDrawers(); //when clicked then close
                 return true;
@@ -179,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
             editor.apply();
         }
     }
+
 
 
 }
