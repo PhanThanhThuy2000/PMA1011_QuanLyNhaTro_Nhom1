@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class ThongBaoDAO {
     private final DBhelper dBhelper;
 
